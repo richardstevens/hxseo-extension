@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "HXSEO System Extension",
+  "description": "This extension will link the HXSEO System with the page your on.",
+  "version": "1.0",
+
+  "icons": {
+    "16": "images/favicon.png",
+    "32": "images/favicon-32x32.png",
+    "48": "images/favicon-48x48.png",
+    "96": "images/favicon-96x96.png"
+  },
+  "browser_action": {
+   "default_icon": "images/favicon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}

@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 var sendRequest = function( url, extras ) {
+  if ( !extras ) extras = '';
 	chrome.tabs.create({
 		'url': 'http://hxseo.seo/urlSearch.php?q=' + url + extras,
 		'selected': true

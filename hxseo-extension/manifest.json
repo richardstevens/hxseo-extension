@@ -3,7 +3,7 @@
 
   "name": "HXSEO System Extension",
   "description": "This extension will link the HXSEO System with the page your on.",
-  "version": "1.0",
+  "version": "1.1",
 
   "icons": {
     "16": "images/favicon.png",
@@ -15,7 +15,15 @@
    "default_icon": "images/favicon.png",
    "default_popup": "popup.html"
   },
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
   "permissions": [
-   "activeTab"
-   ]
+   "tabs",
+   "cookies",
+   "activeTab",
+	 "webRequest",
+	 "*://*/*"
+	]
 }

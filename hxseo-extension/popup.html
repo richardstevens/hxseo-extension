@@ -6,16 +6,35 @@
     	body {
     		background: #CCEAFF url( 'images/background.png' ) top left no-repeat;
     		background-size:cover;
-    		min-width:250px;
+    		min-width:300px;
     		border:0;
     		padding:15px;
     		margin:45px 0 0;
     	}
     	* {
     		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-				font-size: 14px;
-				line-height: 1.428571429;
+				font-size: 12px;
+				line-height: 1em;
 				color: #414141;
+    	}
+    	table {
+    	  border-collapse: collapse;
+    	  width: 100%;
+    	}
+    	table thead {
+				border-bottom: 1px solid #bbb;
+			}
+			table th {
+			  text-align: left;
+			}
+    	table td, table th {
+    	  padding: 5px;
+    	}
+    	.green {
+    	  color: rgb(136,186,56);
+    	}
+    	.red {
+    	  color: rgb(216,43,38);
     	}
     	nav {
     		position:absolute;
@@ -39,6 +58,7 @@
     	nav h1 {
     		font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
     		font-size:22px;
+				line-height: 1.4em;
     		margin: 0;
     		padding:0;
     		position:absolute;
@@ -46,23 +66,23 @@
 				color:#fff;
     	}
     	button {
-    		margin:5px 1% 10px;
     		color: #fff;
-    		width:46%;
-    		float:left;
+    		width:100%;
     		outline:0;
     		border-radius:5px;
 				background-color: #9933cc;
 				border: 1px solid #8a2eb8;
 				cursor: pointer;
+				white-space: nowrap;
+				padding: 7px;
     	}
-    	button:nth-child(even) {
-    		margin-left:0;
-    		clear:both;
+    	button.fr {
+    		margin: 1px 13px 0 10px;
+				float: right;
+				width: auto;
     	}
-    	button:nth-child(odd) {
-    		margin-right:0;
-    		margin-left:7%;
+    	#applyChanges {
+    	  display:none;
     	}
     </style>
     <script src="popup.js"></script>
@@ -71,8 +91,18 @@
   	<nav>
   		<span class="brand"></span>
 	    <h1>HXSEO System</h1>
+	    <button class="fr" id="checkPage">Edit Page</button>
 	  </nav>
-    <button id="checkPage">Edit Page</button>
-    <button id="checkMenu">Edit Menu</button>
+		<table id="splitTests">
+			<thead>
+				<tr>
+					<th>Split Test</th>
+					<th>Currently</th>
+					<th>Flip?</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<button id="applyChanges">Apply Changes</button>
   </body>
 </html>

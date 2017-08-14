@@ -3,7 +3,7 @@
 
   "name": "HXSEO System Extension",
   "description": "This extension will link the HXSEO System with the page your on.",
-  "version": "1.1",
+  "version": "1.2",
 
   "icons": {
     "16": "images/favicon.png",

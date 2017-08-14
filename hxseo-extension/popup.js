@@ -52,7 +52,7 @@ var sortMessage = function(response) {
 var sendRequest = function( url, extras ) {
   if ( !extras ) extras = ''
 	chrome.tabs.create({
-		'url': 'http://hxseo.seo/urlSearch.php?q=' + url + extras,
+		'url': 'http://hxseo/urlSearch.php?q=' + url + extras,
 		'selected': true
 	})
 }

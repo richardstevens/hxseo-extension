@@ -3,106 +3,117 @@
   <head>
     <title>SEO System</title>
     <style type="text/css">
-    	body {
-    		background: #CCEAFF url( 'images/background.png' ) top left no-repeat;
-    		background-size:cover;
-    		min-width:300px;
-    		border:0;
-    		padding:15px;
-    		margin:45px 0 0;
-    	}
-    	* {
-    		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-				font-size: 12px;
-				line-height: 1em;
-				color: #414141;
-    	}
-    	table {
-    	  border-collapse: collapse;
-    	  width: 100%;
-    	}
-    	table thead {
-				border-bottom: 1px solid #bbb;
-			}
-			table th {
-			  text-align: left;
-			}
-    	table td, table th {
-    	  padding: 5px;
-    	}
-    	.green {
-    	  color: rgb(136,186,56);
-    	}
-    	.red {
-    	  color: rgb(216,43,38);
-    	}
-    	nav {
-    		position:absolute;
-    		top:0;
-    		left:0;
-    		width:100%;
-    		height:30px;
-    		padding:5px;
-    		background-color: #264C7A;
-				border: 1px solid #1a3453;
-			}
-			nav .brand {
-				background: url('images/holiday-extras-logo.png') top left no-repeat;
-				width: 100px;
-				height: 55px;
-				position: absolute;
-				top: 0px;
-				left: 8px;
-				background-size: 100%;
-			}
-    	nav h1 {
-    		font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    		font-size:22px;
-				line-height: 1.4em;
-    		margin: 0;
-    		padding:0;
-    		position:absolute;
-    		left:120px;
-				color:#fff;
-    	}
-    	button {
-    		color: #fff;
-    		width:100%;
-    		outline:0;
-    		border-radius:5px;
-				background-color: #9933cc;
-				border: 1px solid #8a2eb8;
-				cursor: pointer;
-				white-space: nowrap;
-				padding: 7px;
-    	}
-    	button.fr {
-    		margin: 1px 13px 0 10px;
-				float: right;
-				width: auto;
-    	}
-    	#applyChanges {
-    	  display:none;
-    	}
+      body {
+        background: #CCEAFF url( 'images/background.png' ) top left no-repeat;
+        background-size:cover;
+        min-width:350px;
+        border:0;
+        padding:15px;
+        margin:45px 0 0;
+      }
+      * {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1em;
+        color: #414141;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table thead {
+        border-bottom: 1px solid #bbb;
+      }
+      table th {
+        text-align: left;
+      }
+      table td, table th {
+        padding: 5px;
+      }
+      .green {
+        color: rgb(136,186,56);
+      }
+      .red {
+        color: rgb(216,43,38);
+      }
+      nav {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:30px;
+        padding:5px;
+        background-color: #264C7A;
+        border: 1px solid #1a3453;
+      }
+      nav .brand {
+        background: url('images/hx-logo-web@2x.png') top left no-repeat;
+        width: 80px;
+        height: 52px;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        background-size: 100%;
+      }
+      nav h1 {
+        font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size:22px;
+        line-height: 1.4em;
+        margin: 0;
+        padding:0;
+        position:absolute;
+        left:120px;
+        color:#fff;
+      }
+      button {
+        color: #fff;
+        width:100%;
+        outline:0;
+        border-radius:5px;
+        background-color: #9933cc;
+        border: 1px solid #8a2eb8;
+        cursor: pointer;
+        white-space: nowrap;
+        padding: 7px;
+      }
+      button.active {
+        background-color: #3e226a;
+      }
+      button.fr {
+        width: auto;
+        margin: 1px 0 0;
+        float: right;
+      }
+      button#editPage {
+        margin-left: 10px;
+      }
+      button#checkPage {
+        margin-left: 5px;
+        margin-right: 13px;
+      }
+      #applyChanges {
+        display:none;
+      }
     </style>
     <script src="popup.js"></script>
   </head>
   <body>
-  	<nav>
-  		<span class="brand"></span>
-	    <h1>HXSEO System</h1>
-	    <button class="fr" id="checkPage">Edit Page</button>
-	  </nav>
-		<table id="splitTests">
-			<thead>
-				<tr>
-					<th>Split Test</th>
-					<th>Currently</th>
-					<th>Flip?</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-		<button id="applyChanges">Apply Changes</button>
+    <nav>
+      <span class="brand"></span>
+      <h1>HXSEO System</h1>
+      <button class="fr" id="checkPage">Edit Page</button>
+      <button class="fr" id="editPage">Edit Inline</button>
+    </nav>
+    <table id="splitTests">
+      <thead>
+        <tr>
+          <th>Split Test</th>
+          <th>Currently</th>
+          <th>Flip?</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="applyChanges">Apply Changes</button>
   </body>
 </html>
